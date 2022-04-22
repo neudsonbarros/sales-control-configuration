@@ -34,7 +34,7 @@ server:
 security:
   jwt:
     token:
-      secret-key: "{cipher}091798fb635b24c9f5a9f3ab6f6844181a0e80d6a76ce1697a88d8404e166f5d"
+      secret-key: "{cipher}60d1fe12ca4c5aad1cdff42a7a3b4c0acd006bc14b20d68302cbf4bf1ac5ff6e"
       expire-length: 300000 # 5 minutes duration by default: 5 minutes * 60 seconds * 1000 miliseconds
 
 UserController:
