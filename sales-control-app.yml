@@ -6,8 +6,8 @@ spring:
     # url: jdbc:mysql://localhost:3306/user_db
 #    username: root
 #    password: root
-    username: "{cipher}0fb1116b6a01043977ea4f50557790ab4eb6af7048359de4c3d252929b10b0d8"
-    password: "{cipher}0fb1116b6a01043977ea4f50557790ab4eb6af7048359de4c3d252929b10b0d8"
+    username: "{cipher}3f002393c6a04e00c0ee1381016187863921235ff0ea4cff0fbc134390ea8428"
+    password: "{cipher}3f002393c6a04e00c0ee1381016187863921235ff0ea4cff0fbc134390ea8428"
   tomcat:
     max-wait: 20000
     max-active: 50
@@ -34,7 +34,7 @@ server:
 security:
   jwt:
     token:
-      secret-key: "{cipher}60d1fe12ca4c5aad1cdff42a7a3b4c0acd006bc14b20d68302cbf4bf1ac5ff6e"
+      secret-key: '{cipher}8945c1bb5c0e26aa8373633fe022d0b4a2944a75ff7b5ac204a82ad2c171ace8'
       expire-length: 300000 # 5 minutes duration by default: 5 minutes * 60 seconds * 1000 miliseconds
 
 UserController:
