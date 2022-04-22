@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:h2:mem:test_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    # url: jdbc:mysql://localhost:3306/user_db
+#    username: root
+#    password: root
+    username: "{cipher}0fb1116b6a01043977ea4f50557790ab4eb6af7048359de4c3d252929b10b0d8"
+    password: "{cipher}0fb1116b6a01043977ea4f50557790ab4eb6af7048359de4c3d252929b10b0d8"
+  tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        # dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        id:
+          new_generator_mappings: false
+#  main:
+#    allow-circular-references: true
+
+server:
+   port: 8080 # This is the default port anyway, but you can change it here
+   servlet:
+     context-path: /api
+
+security:
+  jwt:
+    token:
+      secret-key: "{cipher}6c814efcf361d8baced527d68284f1bce9deac1d8387a0ac49c1c290784f7d3e"
+      expire-length: 300000 # 5 minutes duration by default: 5 minutes * 60 seconds * 1000 miliseconds
+
+UserController:
+  signin: Authenticates user and returns its JWT token.
+  signup: Creates user and returns its JWT token
+  delete: Deletes specific user by username
+  search: Returns specific user by username
+  me: Returns current user's data
